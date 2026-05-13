@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>メニュー管理</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #e6b98a;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header,
+.footer {
+    height: 60px;
+    background-color: #e0663f;
+    flex-shrink: 0;
+}
+
+.container {
+    flex: 1;
+    padding: 10px;
+}
+
+h2 {
+    margin: 15px 0;
+}
+
+/* ===== メニューボタン ===== */
+
+.menu-btn {
+
+    width: 100%;
+
+    padding: 35px 10px;
+
+    margin-bottom: 15px;
+
+    background-color: #ddd594;
+
+    border: 1px solid #c4b66d;
+
+    font-size: 20px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+}
+
+.menu-btn:active {
+
+    background-color: #cfc57f;
+}
+
+/* ===== 戻るボタン ===== */
+
+.back-btn {
+
+    margin-top: 20px;
+
+    width: 120px;
+
+    padding: 12px;
+
+    background-color: #35c3e6;
+
+    color: white;
+
+    border: 1px solid #666;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header"></div>
+
+<div class="container">
+
+    <h2>メニュー管理</h2>
+
+    <!-- 在庫状況 -->
+
+    <div class="menu-btn" onclick="location.href='stock-status.html'">
+        在庫状況
+    </div>
+
+    <!-- メニュー追加 -->
+
+    <div class="menu-btn"
+        onclick="location.href='menu-add.html'">
+
+        メニュー追加
+
+    </div>
+
+    <!-- メニュー編集 -->
+
+    <div class="menu-btn"
+        onclick="location.href='menu-edit.html'">
+
+        メニュー編集
+
+    </div>
+
+    <!-- 戻る -->
+
+    <button class="back-btn"
+        onclick="location.href='home.html'">
+
+        戻る
+
+    </button>
+
+</div>
+
+<div class="footer"></div>
+
+</body>
+</html>
