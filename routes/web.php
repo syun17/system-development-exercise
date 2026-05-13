@@ -7,3 +7,5 @@ Route::get('/', function () {
 });
 
 Route::view('/prototype', 'prototype.index')->name('prototype');
+
+Route::view('/prototype/home', 'prototype.home')->name('prototypehome');
