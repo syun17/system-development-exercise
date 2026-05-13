@@ -303,3 +303,4 @@ App\Http\Controllersフォルダで処理追加
 Route::view('/prototype/{ファイル名}', 'prototype.{ファイル名}')->name('{ファイル名}');
 ```
 5. 起動後http://127.0.0.1:8000/prototype/{ファイル名}を確認
+6. ファイル内のURLを調整
