@@ -275,3 +275,31 @@ php artisan migrate:fresh
 - `.env` ファイルはGitにアップロードしないでください
 - `vendor` フォルダは `composer install` で再生成されます
 - エラーが出た場合は、エラーメッセージをよく読んでください
+
+# フォルダ構成
+
+## MVCアーキテクチャ
+
+- Model データ関連:データベース
+- View 表示関連:画面 (プロトタイプの実装はこれ)
+- Controller 仲介処理:
+
+### Model
+app/Modelsディレクトリ
+
+### View
+resources/viewsディレクトリ
+
+### Controller
+routes/web.phpフォルダでルーティング
+App\Http\Controllersフォルダで処理追加
+
+# プロトタイプの作成方法
+1. 作成済みのhtmlファイルを用意
+2. resources/views/prototypeフォルダの中に貼り付け
+3. 拡張子を`.html`から`.blade.php`に変更
+4. routes/web.phpファイルに以下を追加
+```
+Route::view('/prototype/{ファイル名}', 'prototype.{ファイル名}')->name('{ファイル名}');
+```
+5. 起動後http://127.0.0.1:8000/prototype/{ファイル名}を確認
