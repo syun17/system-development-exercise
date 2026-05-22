@@ -1,97 +1,144 @@
 const menus = {
-	food: [
-		{
-			name: 'ねぎま',
-			price: '150円',
-		},
-		{
-			name: 'もも',
-			price: '150円',
-		},
-		{
-			name: 'せせり',
-			price: '150円',
-		},
-	],
-	drink: [
-		{
-			name: '生ビール',
-			price: '500円',
-		},
-		{
-			name: 'ハイボール',
-			price: '450円',
-		},
-	],
-	service: [
-		{
-			name: 'おしぼり',
-			price: '無料',
-		},
-		{
-			name: '取り皿',
-			price: '無料',
-		},
-	],
-	limited: [
-		{
-			name: '限定串',
-			price: '300円',
-		},
-	],
+
+  food: [
+
+    {
+      name:"ねぎま",
+      price:"150円",
+      image:"images/negima.jpg"
+    },
+
+    {
+      name:"もも",
+      price:"150円",
+      image:"images/momo.jpg"
+    },
+
+    {
+      name:"せせり",
+      price:"150円",
+      image:"images/seseri.jpg"
+    }
+
+  ],
+
+  drink: [
+
+    {
+      name:"生ビール",
+      price:"500円",
+      image:"images/beer.jpg"
+    },
+
+    {
+      name:"ハイボール",
+      price:"450円",
+      image:"images/highball.jpg"
+    }
+
+  ],
+
+  service: [
+
+    {
+      name:"おしぼり",
+      price:"無料",
+      image:"images/towel.jpg"
+    },
+
+    {
+      name:"取り皿",
+      price:"無料",
+      image:"images/plate.jpg"
+    }
+
+  ],
+
+  limited: [
+
+    {
+      name:"限定串",
+      price:"300円",
+      image:"images/limited.jpg"
+    }
+
+  ]
+
 };
 
-function showMenu(category, event) {
-	const menuList = document.getElementById('menu-list');
 
-	if (!menuList || !menus[category]) {
-		return;
-	}
+// メニュー表示
+function showMenu(category, event){
 
-	menuList.innerHTML = '';
+  const menuList =
+    document.getElementById("menu-list");
 
-	menus[category].forEach((item) => {
-		menuList.innerHTML += `
-			<a href="#" class="item">
-				<div class="item-text">
-					<h2>${item.name}</h2>
-					<p>${item.price}</p>
-				</div>
-			</a>
-		`;
-	});
+  menuList.innerHTML = "";
 
-	document.querySelectorAll('.tab').forEach((tab) => {
-		tab.classList.remove('active');
-	});
+  menus[category].forEach(item => {
 
-	if (event && event.target) {
-		event.target.classList.add('active');
-	}
+    menuList.innerHTML += `
+
+      <a href="detail.html" class="item">
+
+        <div class="item-text">
+
+          <h2>${item.name}</h2>
+
+          <p>${item.price}</p>
+
+        </div>
+
+        <img src="${item.image}" alt="">
+
+      </a>
+
+    `;
+
+  });
+
+
+  // タブ切替
+  document.querySelectorAll(".tab")
+    .forEach(tab => {
+      tab.classList.remove("active");
+  });
+
+  event.target.classList.add("active");
+
 }
 
-window.showMenu = showMenu;
 
-window.addEventListener('DOMContentLoaded', () => {
-	const params = new URLSearchParams(window.location.search);
-	const category = params.get('category') || 'food';
-	const tabs = document.querySelectorAll('.tab');
+// URLパラメータ取得
+const params =
+  new URLSearchParams(window.location.search);
 
-	let targetTab = tabs[0];
+const category =
+  params.get("category") || "food";
 
-	if (category === 'drink') {
-		targetTab = tabs[1];
-	}
 
-	if (category === 'service') {
-		targetTab = tabs[2];
-	}
+// 初期表示
+window.onload = () => {
 
-	if (category === 'limited') {
-		targetTab = tabs[3];
-	}
+  const tabs =
+    document.querySelectorAll(".tab");
 
-	showMenu(category, {
-		target: targetTab,
-	});
-});
+  let targetTab = tabs[0];
+
+  if(category === "drink"){
+    targetTab = tabs[1];
+  }
+
+  if(category === "service"){
+    targetTab = tabs[2];
+  }
+
+  if(category === "limited"){
+    targetTab = tabs[3];
+  }
+
+  showMenu(category, {
+    target:targetTab
+  });
+
+};

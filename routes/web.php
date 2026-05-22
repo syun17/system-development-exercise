@@ -13,6 +13,24 @@ Route::view('/prototype/home', 'prototype.home')->name('prototypehome');
 
 Route::view('/prototype/orderHome', 'prototype.orderHome')->name('prototypeorderHome');
 
+Route::view('/prototype/detail', 'prototype.detail')->name('prototypedetail');
+
+Route::view('/prototype/cart', 'prototype.cart')->name('prototypecart');
+
+Route::view('/prototype/history', 'prototype.history')->name('prototypehistory');
+
+Route::view('/prototype/call', 'prototype.call')->name('prototypecall');
+
+Route::view('/prototype/checkout', 'prototype.checkout')->name('prototypecheckout');
+
+Route::view('/prototype/confirm', 'prototype.confirm')->name('prototypeconfirm');
+
+Route::view('/prototype/add', 'prototype.add')->name('prototypeadd');
+
+Route::view('/prototype/complete', 'prototype.complete')->name('prototypecomplete');
+
+Route::view('/prototype/thanks', 'prototype.thanks')->name('prototypethanks');
+
 Route::view('/prototype/login', 'prototype.login')->name('prototypelogin');
 
 Route::view('/prototype/home', 'prototype.home')->name('prototypehome');
