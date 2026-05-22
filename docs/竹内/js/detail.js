@@ -1,5 +1,5 @@
 
-let count = 0;
+let count = 1;
 
 const countText =
   document.getElementById("count");
@@ -22,12 +22,18 @@ const orderBtn =
 
 // 味選択
 function enableCounter(){
+  count = 1
+
+  countText.textContent = count
 
   plusBtn.disabled = false;
+
+  minusBtn.disabled = true;
 
   orderBtn.disabled = false;
 
   tareBtn.classList.remove("selected");
+
   shioBtn.classList.remove("selected");
 
 }
@@ -56,24 +62,42 @@ shioBtn.addEventListener("click", () => {
 // ＋
 plusBtn.addEventListener("click", () => {
 
-  count++;
+  if(count < 4){
 
-  countText.textContent = count;
+    count++;
 
+    countText.textContent = count;
+
+    //＋無効
+    if(count >= 4){
+      plusBtn.disabled = true;
+    }
+    //－有効
+    if(count > 1){
+      minusBtn.disabled = false;
+    }
+  }
 });
 
 
 // －
 minusBtn.addEventListener("click", () => {
 
-  if(count > 0){
+  if(count > 1){
 
     count--;
 
     countText.textContent = count;
 
+    //－無効
+    if(count <= 1){
+      minusBtn.disabled = true;
+    }
+    //＋有効
+    if(count < 4){
+      plusBtn.disabled = false;
+    }
   }
-
 });
 
 
@@ -83,7 +107,7 @@ orderBtn.addEventListener("click", () => {
   if(count > 0){
 
     window.location.href =
-      "confirm.html";
+      "add.html";
 
   }else{
 

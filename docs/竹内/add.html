@@ -2,10 +2,11 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-  <title>注文確認</title>
+  <title>注文完了</title>
 
   <link rel="stylesheet"
     href="css/style.css">
@@ -25,31 +26,15 @@
     <button>店舗限定</button>
   </nav>
 
-  <div class="confirm-area">
+  <div class="thanks-message">
 
-    <h1>
-      注文を確定しますか？
-    </h1>
-
-    <div class="confirm-buttons">
-
-      <a href="thanks.html">
-        <button>はい</button>
-      </a>
-
-      <a href="detail.html">
-        <button>いいえ</button>
-      </a>
-
-    </div>
+    注文カゴに追加しました
 
   </div>
 
   <footer>
 
-    <a href="history.html">
-      <button>注文履歴</button>
-    </a>
+    <button>注文履歴</button>
 
     <a href="call.html">
       <button>店員呼出</button>
@@ -60,6 +45,16 @@
   </footer>
 
 </div>
+
+<script>
+
+setTimeout(() => {
+
+  window.location.href = "orderHome.html";
+
+}, 1000);
+
+</script>
 
 </body>
 </html>
