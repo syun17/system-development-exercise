@@ -304,3 +304,15 @@ Route::view('/prototype/{ファイル名}', 'prototype.{ファイル名}')->name
 ```
 5. 起動後http://127.0.0.1:8000/prototype/{ファイル名}を確認
 6. ファイル内のURLを調整
+
+## CSS,Javascriptの適用方法
+CSSとJavascriptは `public` フォルダに置いて配信します。
+1. CSSファイルとJavascriptファイルを用意する
+2. CSSファイルは `public/css` フォルダに、Javascriptファイルは `public/js` フォルダに入れる
+3. `resources/views/prototype` フォルダのBladeファイルで以下のように読み込む
+```
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<script src="{{ asset('js/app.js') }}" defer></script>
+```
+4. ファイル内のURLや画像パスを必要に応じて調整する
+5. 起動後 http://127.0.0.1:8000/prototype/{ファイル名} を確認する
