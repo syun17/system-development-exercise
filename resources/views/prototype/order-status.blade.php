@@ -235,7 +235,7 @@ tbody tr {
     </table>
 
     <button class="back-btn"
-        onclick="location.href='home.html'">
+        onclick="location.href='./home'">
 
         戻る
 
