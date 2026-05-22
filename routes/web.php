@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('prototype.orderHome');
 });
 
 Route::view('/prototype', 'prototype.index')->name('prototype');
