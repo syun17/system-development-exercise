@@ -8,6 +8,11 @@ Route::get('/', function () {
 
 Route::view('/prototype', 'prototype.index')->name('prototype');
 
+
+Route::view('/prototype/home', 'prototype.home')->name('prototypehome');
+
+Route::view('/prototype/orderHome', 'prototype.orderHome')->name('prototypeorderHome');
+
 Route::view('/prototype/login', 'prototype.login')->name('prototypelogin');
 
 Route::view('/prototype/home', 'prototype.home')->name('prototypehome');
@@ -25,3 +30,4 @@ Route::view('/prototype/menu-add', 'prototype.menu-add')->name('prototypemenu-ad
 Route::view('/prototype/menu-edit-list', 'prototype.menu-edit-list')->name('prototypemenu-edit-list');
 
 Route::view('/prototype/menu-edit', 'prototype.menu-edit')->name('prototypemenu-edit');
+

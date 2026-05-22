@@ -183,7 +183,7 @@ header{
 
   text-align:center;
 
-  font-size:35px;
+  font-size:40px;
 }
 
 .call-area{
@@ -224,144 +224,11 @@ footer{
   background:#e76f51;
 }
 
-footer a{
-  flex:1;
-  display:flex;
-
-  text-decoration:none;
-}
-
 footer button{
   flex:1;
 
   margin:10px;
   padding:15px 5px;
-
-  font-size:25px;
-  line-height:1.2;
-}
-
-.footer-none{
-  height:80px;
-}
-
-/* =========================
-   注文履歴
-========================= */
-
-.history-page{
-  min-height:100vh;
-
-  padding-bottom:100px;
-}
-
-
-/* 一覧 */
-.history-list{
-  padding:10px;
-}
-
-
-/* 商品カード */
-.history-item{
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  background:#e5df9c;
-
-  border:1px solid #c8b870;
-
-  margin-bottom:10px;
-
-  padding:10px;
-}
-
-
-/* 左側 */
-.history-info{
-  display:flex;
-
-  flex-direction:column;
-}
-
-
-/* 商品名 */
-.item-name{
-  margin:0;
-
-  font-size:35px;
-}
-
-
-/* 金額 */
-.item-price{
-  margin:0;
-
-  font-size:35px;
-}
-
-
-/* 個数丸 */
-.item-count{
-  width:60px;
-
-  height:60px;
-
-  border-radius:50%;
-
-  background:#9d9d9d;
-
-  color:white;
-
-  display:flex;
-
-  justify-content:center;
-
-  align-items:center;
-
-  font-size:30px;
-}
-
-.total-area{
-  margin:120px 30px 20px 30px;
-
-  padding:15px;
-
-  background:#e76f51;
-
-  color:white;
-
-  text-align:right;
-
-  font-size:35px;
-
-  font-weight:bold;
-
-  border-radius:10px;
-}
-
-.checkout-total{
-  padding:20px 40px;
-
-  background:#e76f51;
-
-  color:white;
-
-  border-radius:10px;
-
-  font-size:40px;
-
-  font-weight:bold;
-}
-
-.confirm-buttons button{
-  width:130px;
-  height:65px;
-
-  border-radius:32px;
 
   font-size:25px;
 }
