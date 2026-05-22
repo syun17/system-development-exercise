@@ -58,17 +58,17 @@ h2 {
 <div class="container">
     <h2>ホーム</h2>
 
-    <div class="menu-btn" onclick="location.href='order-status.html'">
+    <div class="menu-btn" onclick="location.href='./order-status'">
         注文状況
     </div>
-    <div class="menu-btn" onclick="location.href='seat-management.html'">
+    <div class="menu-btn" onclick="location.href='./seat-management'">
         空席管理
     </div>
-    <div class="menu-btn" onclick="location.href='menu-management.html'">
+    <div class="menu-btn" onclick="location.href='./menu-management'">
         メニュー管理
     </div>
 
-    <div class="menu-btn logout" onclick="location.href='login.html'">
+    <div class="menu-btn logout" onclick="location.href='./login'">
         ログアウト
     </div>
 </div>

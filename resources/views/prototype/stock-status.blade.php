@@ -190,7 +190,7 @@ tbody tr {
     </table>
 
     <button class="back-btn"
-        onclick="location.href='menu-management.html'">
+        onclick="location.href='./menu-management'">
 
         戻る
 
