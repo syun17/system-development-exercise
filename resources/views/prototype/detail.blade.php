@@ -68,7 +68,7 @@
       <button class="back">戻る</button>
     </a>
 
-    <button class="order" id="orderBtn" disabled>カートに追加🛒</button>
+    <button class="add" id="orderBtn" disabled>カートに追加🛒</button>
 
   </div>
 
