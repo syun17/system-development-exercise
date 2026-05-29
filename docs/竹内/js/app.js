@@ -26,13 +26,13 @@ const menus = {
 
     {
       name:"生ビール",
-      price:"500円",
+      price:"0円",
       image:"images/beer.jpg"
     },
 
     {
       name:"ハイボール",
-      price:"450円",
+      price:"0円",
       image:"images/highball.jpg"
     }
 

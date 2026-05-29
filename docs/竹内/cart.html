@@ -33,66 +33,86 @@
   <div class="history-list">
 
     <!-- 商品 -->
-    <div class="history-item">
+    <div class="history-row">
 
-      <div class="history-info">
+      <div class="history-item">
 
-        <p class="item-name">
-          ねぎま（塩）
-        </p>
+        <div class="history-info">
 
-        <p class="item-price">
-          １５０円
-        </p>
+          <p class="item-name">
+            ねぎま（塩）
+          </p>
+
+          <p class="item-price">
+            150円
+          </p>
+
+        </div>
+
+        <div class="item-count-control">
+          <button class="qty-btn minus-btn">−</button>
+          <div class="item-count">1</div>
+          <button class="qty-btn plus-btn">+</button>
+        </div>
 
       </div>
 
-      <div class="item-count">
-        1
-      </div>
+      <button class="delete-item-btn">
+        🗑
+      </button>
 
     </div>
 
     <!-- 商品 -->
-    <div class="history-item">
+    <div class="history-row">
 
-      <div class="history-info">
+      <div class="history-item">
 
-        <p class="item-name">
-          生ビール
-        </p>
+        <div class="history-info">
 
-        <p class="item-price">
-          ５５０円
-        </p>
+          <p class="item-name">
+            生ビール
+          </p>
+
+          <p class="item-price">
+            0円
+          </p>
+
+        </div>
+
+        <div class="item-count-control">
+          <button class="qty-btn minus-btn">−</button>
+          <div class="item-count">2</div>
+          <button class="qty-btn plus-btn">+</button>
+        </div>
 
       </div>
 
-      <div class="item-count">
-        2
-      </div>
+      <button class="delete-item-btn">
+        🗑
+      </button>
 
     </div>
 
   </div>
 
+  <!-- 合計 -->
   <div class="total-area">
-    合計　1,250円
+    合計　150円
   </div>
 
+  <!-- ボタン -->
   <div class="cart-buttons">
 
-    <button
-      class="back-btn"
-      onclick="history.back()">
-      戻る
+    <button class="delete-all-btn">
+      全て削除
     </button>
     
-    <button class="confirm-btn">
-
-      注文確定
-
-    </button>
+    <a href="confirm.html">
+      <button class="confirm-btn">
+        注文確定
+      </button>
+    </a>
 
   </div>
 
@@ -104,6 +124,7 @@
         注文
       </button>
     </a>
+
     <a href="history.html">
       <button>
         注文履歴
@@ -114,16 +135,18 @@
       <button>
         店員呼出
       </button>
-
     </a>
 
     <a href="checkout.html">
-      <button>会計</button>
+      <button>
+        会計
+      </button>
     </a>
 
   </footer>
 
 </div>
 
+<script src="js/cart.js" defer></script>
 </body>
 </html>
