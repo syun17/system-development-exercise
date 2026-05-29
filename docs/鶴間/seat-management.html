@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>空席管理</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #e6b98a;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header,
+.footer {
+    height: 60px;
+    background-color: #e0663f;
+    flex-shrink: 0;
+}
+
+.container {
+    flex: 1;
+    padding: 10px;
+}
+
+h2 {
+    margin: 15px 0;
+}
+
+/* ===== テーブル ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #666;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 14px;
+}
+
+th {
+    background-color: #999;
+    color: white;
+}
+
+tbody tr {
+    height: 50px;
+}
+
+/* ===== プルダウン ===== */
+
+.seat-select {
+
+    width: 100%;
+
+    border: none;
+
+    background-color: white;
+
+    font-size: 16px;
+
+    text-align: center;
+}
+
+/* ===== 戻るボタン ===== */
+
+.back-btn {
+
+    margin-top: 20px;
+
+    width: 120px;
+
+    padding: 12px;
+
+    background-color: #35c3e6;
+
+    color: white;
+
+    border: 1px solid #666;
+
+    font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header"></div>
+
+<div class="container">
+
+    <h2>空席管理</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>席番号</th>
+                <th>定員</th>
+                <th>空席</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>1</td>
+
+                <td>6</td>
+
+                <td>
+
+                    <select class="seat-select">
+
+                        <option>空</option>
+
+                        <option>使</option>
+
+                        <option>掃</option>
+
+                    </select>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>2</td>
+
+                <td>6</td>
+
+                <td>
+
+                    <select class="seat-select">
+
+                        <option>空</option>
+
+                        <option>使</option>
+
+                        <option>掃</option>
+
+                    </select>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>3</td>
+
+                <td>6</td>
+
+                <td>
+
+                    <select class="seat-select">
+
+                        <option>空</option>
+
+                        <option>使</option>
+
+                        <option>掃</option>
+
+                    </select>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>4</td>
+
+                <td>6</td>
+
+                <td>
+
+                    <select class="seat-select">
+
+                        <option>空</option>
+
+                        <option>使</option>
+
+                        <option>掃</option>
+
+                    </select>
+
+                </td>
+
+            </tr>
+
+            <!-- 空行 -->
+
+            <tr>
+                <td>&nbsp;</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <button class="back-btn"
+        onclick="location.href='home.html'">
+
+        戻る
+
+    </button>
+
+</div>
+
+<div class="footer"></div>
+
+</body>
+</html>
