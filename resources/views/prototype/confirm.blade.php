@@ -2,9 +2,14 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
   <title>注文確認</title>
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+  <link rel="stylesheet"
+    href="{{ asset('css/style.css') }}">
 </head>
 <body>
 
@@ -26,16 +31,37 @@
     <h1>注文を確定しますか？</h1>
 
     <div class="confirm-buttons">
-      <a href="{{ url('/prototype/thanks') }}"><button>はい</button></a>
-      <a href="{{ url('/prototype/detail') }}"><button>いいえ</button></a>
+
+      <a href="{{ url('/prototype/complete') }}">
+        <button>はい</button>
+      </a>
+
+      <a href="{{ url('/prototype/cart') }}">
+        <button>いいえ</button>
+      </a>
+
     </div>
 
   </div>
 
   <footer>
-    <a href="{{ url('/prototype/history') }}"><button>注文履歴</button></a>
-    <a href="{{ url('/prototype/call') }}"><button>店員呼出</button></a>
-    <a href="{{ url('/prototype/checkout') }}"><button>会計</button></a>
+
+    <a href="{{ url('/prototype/orderHome') }}">
+      <button>注文</button>
+    </a>
+
+    <a href="{{ url('/prototype/history') }}">
+      <button>注文履歴</button>
+    </a>
+
+    <a href="{{ url('/prototype/call') }}">
+      <button>店員呼出</button>
+    </a>
+
+    <a href="{{ url('/prototype/checkout') }}">
+      <button>会計</button>
+    </a>
+
   </footer>
 
 </div>

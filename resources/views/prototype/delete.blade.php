@@ -6,7 +6,7 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-  <title>注文完了</title>
+  <title>注文確認</title>
 
   <link rel="stylesheet"
     href="{{ asset('css/style.css') }}">
@@ -26,14 +26,29 @@
     <button>店舗限定</button>
   </nav>
 
-  <div class="thanks-message">
+  <div class="confirm-area">
 
-    ご注文<br>
-    ありがとうございます
+    <h1>
+      全て削除します<br>
+      よろしいですか？
+    </h1>
+
+    <div class="confirm-buttons">
+
+      <a href="{{ url('/prototype/cart') }}">
+        <button>はい</button>
+      </a>
+
+      <a href="{{ url('/prototype/cart') }}">
+        <button>いいえ</button>
+      </a>
+
+    </div>
 
   </div>
 
   <footer>
+
     <a href="{{ url('/prototype/orderHome') }}">
       <button>注文</button>
     </a>
@@ -53,16 +68,6 @@
   </footer>
 
 </div>
-
-<script>
-
-setTimeout(() => {
-
-  window.location.href = "{{ url('/prototype/orderHome') }}";
-
-}, 1000);
-
-</script>
 
 </body>
 </html>

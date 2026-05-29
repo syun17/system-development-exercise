@@ -17,6 +17,8 @@ Route::view('/prototype/detail', 'prototype.detail')->name('prototypedetail');
 
 Route::view('/prototype/cart', 'prototype.cart')->name('prototypecart');
 
+Route::view('/prototype/delete', 'prototype.delete')->name('prototypedelete');
+
 Route::view('/prototype/history', 'prototype.history')->name('prototypehistory');
 
 Route::view('/prototype/call', 'prototype.call')->name('prototypecall');
