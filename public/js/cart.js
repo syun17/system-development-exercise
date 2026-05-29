@@ -84,3 +84,18 @@ window.addEventListener("DOMContentLoaded", () => {
   
   updateTotal();
 });
+
+// If redirected after server-side clear, remove displayed items as well
+(() => {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('cleared') === '1') {
+      if (cartList) {
+        cartList.innerHTML = '';
+      }
+      updateTotal();
+      // Optionally clear any client-side storage key named 'cart'
+      try { localStorage.removeItem('cart'); } catch (e) {}
+    }
+  } catch (e) {}
+})();

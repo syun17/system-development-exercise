@@ -104,9 +104,11 @@
   <!-- ボタン -->
   <div class="cart-buttons">
 
-    <button class="delete-all-btn">
-      全て削除
-    </button>
+    <a href="{{ url('/prototype/delete') }}">
+      <button class="delete-all-btn">
+        全て削除
+      </button>
+    </a>
     
     <a href="{{ url('/prototype/confirm') }}">
       <button class="confirm-btn">
