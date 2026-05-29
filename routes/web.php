@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('prototype.orderHome');
@@ -16,6 +17,8 @@ Route::view('/prototype/orderHome', 'prototype.orderHome')->name('prototypeorder
 Route::view('/prototype/detail', 'prototype.detail')->name('prototypedetail');
 
 Route::view('/prototype/cart', 'prototype.cart')->name('prototypecart');
+
+Route::view('/prototype/delete', 'prototype.delete')->name('prototypedelete');
 
 Route::view('/prototype/history', 'prototype.history')->name('prototypehistory');
 
@@ -48,4 +51,9 @@ Route::view('/prototype/menu-add', 'prototype.menu-add')->name('prototypemenu-ad
 Route::view('/prototype/menu-edit-list', 'prototype.menu-edit-list')->name('prototypemenu-edit-list');
 
 Route::view('/prototype/menu-edit', 'prototype.menu-edit')->name('prototypemenu-edit');
+
+Route::post('/prototype/cart/clear', function (Request $request) {
+    $request->session()->forget('cart');
+    return redirect('/prototype/cart?cleared=1');
+})->name('prototype.cart.clear');
 
