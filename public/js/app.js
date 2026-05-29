@@ -5,19 +5,19 @@ const menus = {
     {
       name:"ねぎま",
       price:"150円",
-      image:"images/negima.jpg"
+      image:"public/images/negima.jpg"
     },
 
     {
       name:"もも",
       price:"150円",
-      image:"images/momo.jpg"
+      image:"public/images/momo.jpg"
     },
 
     {
       name:"せせり",
       price:"150円",
-      image:"images/seseri.jpg"
+      image:"public/images/seseri.jpg"
     }
 
   ],
@@ -27,13 +27,13 @@ const menus = {
     {
       name:"生ビール",
       price:"0円",
-      image:"images/beer.jpg"
+      image:"public/images/beer.jpg"
     },
 
     {
       name:"ハイボール",
       price:"0円",
-      image:"images/highball.jpg"
+      image:"public/images/highball.jpg"
     }
 
   ],
@@ -43,13 +43,13 @@ const menus = {
     {
       name:"おしぼり",
       price:"無料",
-      image:"images/towel.jpg"
+      image:"public/images/towel.jpg"
     },
 
     {
       name:"取り皿",
       price:"無料",
-      image:"images/plate.jpg"
+      image:"public/images/plate.jpg"
     }
 
   ],
@@ -59,7 +59,7 @@ const menus = {
     {
       name:"限定串",
       price:"300円",
-      image:"images/limited.jpg"
+      image:"public/images/limited.jpg"
     }
 
   ]
