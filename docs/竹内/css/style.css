@@ -13,7 +13,8 @@ body{
   margin:auto;
   min-height:100vh;
   background:#f4c99b;
-  padding-bottom:100px;
+  padding-top:120px;
+  padding-bottom:220px;
 }
 
 
@@ -22,11 +23,22 @@ body{
 ========================= */
 
 header{
+  position:fixed;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:100%;
+  max-width:430px;
+  box-sizing:border-box;
   background:#e76f51;
   color:white;
-  padding:10px;
-  text-align:right;
-  font-size:20px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  padding:0 10px;
+  height:60px;
+  font-size:18px;
+  z-index:10;
 }
 
 
@@ -35,7 +47,16 @@ header{
 ========================= */
 
 .tabs{
+  position:fixed;
+  top:60px;
+  left:50%;
+  transform:translateX(-50%);
+  width:100%;
+  max-width:430px;
   display:flex;
+  background:#f6d67a;
+  z-index:9;
+  box-sizing:border-box;
 }
 
 .tabs button{
@@ -58,6 +79,8 @@ header{
 footer{
   position:fixed;
   bottom:0;
+  left:50%;
+  transform:translateX(-50%);
   width:100%;
   max-width:430px;
   display:flex;
@@ -221,11 +244,12 @@ footer button{
 
 .history-page{
   min-height:100vh;
+  padding-top:70px;
   padding-bottom:100px;
 }
 
 .history-title{
-  margin:20px 0;
+  margin:5px 0 15px;
   text-align:center;
   font-size:40px;
 }
@@ -271,27 +295,73 @@ footer button{
   font-size:20px;
 }
 
+.item-count-control{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.qty-btn{
+  width:38px;
+  height:38px;
+  border:none;
+  border-radius:50%;
+  background:#ff8f66;
+  color:white;
+  font-size:24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+}
+
+.qty-btn:disabled{
+  background:#cccccc;
+  color:#7a7a7a;
+  cursor:default;
+}
+
+.qty-btn:active{
+  opacity:0.85;
+}
+
 .total-area{
-  margin:120px 30px 20px 30px;
-  padding:15px;
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:220px;
+  width:100%;
+  max-width:430px;
+  box-sizing:border-box;
+  margin:0;
+  padding:15px 30px;
   background:#e76f51;
   color:white;
   text-align:right;
   font-size:35px;
   font-weight:bold;
   border-radius:10px;
+  z-index:8;
+}
+
+.cart-buttons{
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:130px;
+  width:100%;
+  max-width:430px;
+  padding:0 30px;
+  box-sizing:border-box;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  z-index:8;
 }
 
 /* =========================
    注文カゴ
 ========================= */
-
-.cart-buttons{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  margin-top:30px;
-}
 
 .delete-all-btn{
   width:180px;
@@ -323,13 +393,13 @@ footer button{
 }
 
 .delete-item-btn{
-  width:45px;
-  height:45px;
+  width:35px;
+  height:35px;
   border:none;
   border-radius:50%;
   background:#d9534f;
   color:white;
-  font-size:24px;
+  font-size:20px;
   display:flex;
   justify-content:center;
   align-items:center;

@@ -44,13 +44,15 @@
           </p>
 
           <p class="item-price">
-            １５０円
+            150円
           </p>
 
         </div>
 
-        <div class="item-count">
-          1
+        <div class="item-count-control">
+          <button class="qty-btn minus-btn">−</button>
+          <div class="item-count">1</div>
+          <button class="qty-btn plus-btn">+</button>
         </div>
 
       </div>
@@ -73,13 +75,15 @@
           </p>
 
           <p class="item-price">
-            ０円
+            0円
           </p>
 
         </div>
 
-        <div class="item-count">
-          2
+        <div class="item-count-control">
+          <button class="qty-btn minus-btn">−</button>
+          <div class="item-count">2</div>
+          <button class="qty-btn plus-btn">+</button>
         </div>
 
       </div>
@@ -100,11 +104,9 @@
   <!-- ボタン -->
   <div class="cart-buttons">
 
-    <a href="delete.html">
-      <button class="delete-all-btn">
-        全て削除
-      </button>
-    </a>
+    <button class="delete-all-btn">
+      全て削除
+    </button>
     
     <a href="confirm.html">
       <button class="confirm-btn">
@@ -145,5 +147,6 @@
 
 </div>
 
+<script src="js/cart.js" defer></script>
 </body>
 </html>
