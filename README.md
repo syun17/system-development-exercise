@@ -148,6 +148,11 @@ mysqld --defaults-file="C:\Users\{学籍番号}\mysql\my.ini"
 php artisan serve
 ```
 
+プロトタイプ用
+```bash
+php artisan serve --host=0.0.0.0 --port=80
+```
+
 ---
 
 # よくあるエラー
