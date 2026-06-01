@@ -61,20 +61,20 @@
 <script>
   const menus = {
     food: [
-      { name: 'ねぎま', price: '150円', image: '/public/images/negima.jpg' },
-      { name: 'もも', price: '150円', image: '/public/images/momo.jpg' },
-      { name: 'せせり', price: '150円', image: '/public/images/seseri.jpg' },
+      { name: 'ねぎま', price: '150円', image: '/images/negima.jpg' },
+      { name: 'もも', price: '150円', image: '/images/momo.jpg' },
+      { name: 'せせり', price: '150円', image: '/images/seseri.jpg' },
     ],
     drink: [
-      { name: '生ビール', price: '500円', image: '/public/images/beer.jpg' },
-      { name: 'ハイボール', price: '450円', image: '/public/images/highball.jpg' },
+      { name: '生ビール', price: '500円', image: '/images/beer.jpg' },
+      { name: 'ハイボール', price: '450円', image: '/images/highball.jpg' },
     ],
     service: [
-      { name: 'おしぼり', price: '無料', image: '/public/images/towel.jpg' },
-      { name: '取り皿', price: '無料', image: '/public/images/plate.jpg' },
+      { name: 'おしぼり', price: '無料', image: '/images/towel.jpg' },
+      { name: '取り皿', price: '無料', image: '/images/plate.jpg' },
     ],
     limited: [
-      { name: '限定串', price: '300円', image: '/public/images/limited.jpg' },
+      { name: '限定串', price: '300円', image: '/images/limited.jpg' },
     ],
   };
 

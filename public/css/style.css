@@ -6,12 +6,12 @@ body{
   margin:0;
   font-family:sans-serif;
   background:#f4c99b;
+  overflow-x:hidden;
 }
 
 .container{
   max-width:430px;
   margin:auto;
-  min-height:100vh;
   background:#f4c99b;
   padding-top:120px;
   padding-bottom:220px;
@@ -123,8 +123,8 @@ footer button{
 }
 
 .item img{
-  width:140px;
-  height:90px;
+  width:120px;
+  height:80px;
   object-fit:cover;
 }
 
@@ -144,9 +144,12 @@ footer button{
 ========================= */
 
 .detail-image{
-  width:100%;
-  height:250px;
+  width:95%;
+  max-width:600px;
+  height:220px;
   object-fit:cover;
+  display:block;
+  margin:0 auto 40px;
 }
 
 .detail-info{
@@ -154,6 +157,17 @@ footer button{
   justify-content:space-between;
   align-items:center;
   font-size:30px;
+  margin-bottom:32px;
+}
+
+.detail-info h2,
+.detail-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.detail-info h2 {
+  line-height: 1.1;
 }
 /** 味選択**/
 .flavor{
