@@ -34,9 +34,13 @@ Route::view('/prototype/complete', 'prototype.customer.complete')->name('prototy
 
 Route::view('/prototype/thanks', 'prototype.customer.thanks')->name('prototypethanks');
 
-Route::view('/prototype/login', 'prototype.customer.login')->name('prototypelogin');
+Route::view('/prototype/login', 'prototype.staff.login')->name('prototypelogin');
 
-Route::view('/prototype/home', 'prototype.customer.home')->name('prototypehome');
+Route::view('/prototype/home', 'prototype.staff.home')->name('prototypehome');
+
+Route::view('/prototype/order-menu', 'prototype.staff.order-menu')->name('prototypeorder-menu');
+
+Route::view('/prototype/order-history', 'prototype.staff.order-history')->name('prototypeorder-history');
 
 Route::view('/prototype/order-status', 'prototype.staff.order-status')->name('prototypeorder-status');
 
