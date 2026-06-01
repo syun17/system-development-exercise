@@ -354,7 +354,7 @@ input[type="number"]::-webkit-inner-spin-button {
     <div class="button-area">
 
         <button class="back-btn"
-            onclick="location.href='./menu-management'">
+            onclick="location.href='{{ url('/prototype/menu-management') }}'">
 
             戻る
 

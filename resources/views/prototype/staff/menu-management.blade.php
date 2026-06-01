@@ -93,36 +93,21 @@ h2 {
 
     <!-- 在庫状況 -->
 
-    <div class="menu-btn" onclick="location.href='./stock-status'">
+    <div class="menu-btn" onclick="location.href='{{ url('/prototype/stock-status') }}'">
         在庫状況
     </div>
 
     <!-- メニュー追加 -->
 
-    <div class="menu-btn"
-        onclick="location.href='./menu-add'">
-
-        メニュー追加
-
-    </div>
+    <div class="menu-btn" onclick="location.href='{{ url('/prototype/menu-add') }}'">メニュー追加</div>
 
     <!-- メニュー編集 -->
 
-    <div class="menu-btn"
-        onclick="location.href='./menu-edit-list'">
-
-        メニュー編集
-
-    </div>
+    <div class="menu-btn" onclick="location.href='{{ url('/prototype/menu-edit-list') }}'">メニュー編集</div>
 
     <!-- 戻る -->
 
-    <button class="back-btn"
-        onclick="location.href='./home'">
-
-        戻る
-
-    </button>
+    <button class="back-btn" onclick="location.href='{{ url('/prototype/home') }}'">戻る</button>
 
 </div>
 

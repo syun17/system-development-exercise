@@ -414,10 +414,8 @@ h2 {
     <!-- ===== 戻る ===== -->
 
     <button class="back-btn"
-        onclick="location.href='./menu-management'">
-
+        onclick="location.href='{{ url('/prototype/menu-management') }}'">
         戻る
-
     </button>
 
 </div>
@@ -496,9 +494,7 @@ let deleteTarget = null;
 /* ===== 編集 ===== */
 
 function editMenu() {
-
-    location.href =
-        "./menu-edit";
+    location.href = '{{ url('/prototype/menu-edit') }}';
 }
 
 /* ===== モーダル表示 ===== */

@@ -189,12 +189,7 @@ tbody tr {
 
     </table>
 
-    <button class="back-btn"
-        onclick="location.href='./menu-management'">
-
-        戻る
-
-    </button>
+    <button class="back-btn" onclick="location.href='{{ url('/prototype/menu-management') }}'">戻る</button>
 
 </div>
 
