@@ -58,7 +58,7 @@ button {
     <input type="text" placeholder="従業員ID"><br>
     <input type="password" placeholder="パスワード"><br>
 
-    <button onclick="location.href='./home'">ログイン</button>
+    <button onclick="location.href='{{ route('prototypehome') }}'">ログイン</button>
 </div>
 
 <div class="footer"></div>

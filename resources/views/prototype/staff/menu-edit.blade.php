@@ -379,7 +379,7 @@ input[type="number"]::-webkit-inner-spin-button {
         <!-- ===== 戻る ===== -->
 
         <button class="back-btn"
-            onclick="location.href='./menu-edit-list'">
+            onclick="location.href='{{ route('prototypemenu-edit-list') }}'">
 
             戻る
 

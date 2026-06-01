@@ -93,14 +93,14 @@ h2 {
 
     <!-- 在庫状況 -->
 
-    <div class="menu-btn" onclick="location.href='./stock-status'">
+    <div class="menu-btn" onclick="location.href='{{ route('prototypestock-status') }}'">
         在庫状況
     </div>
 
     <!-- メニュー追加 -->
 
     <div class="menu-btn"
-        onclick="location.href='./menu-add'">
+        onclick="location.href='{{ route('prototypemenu-add') }}'">
 
         メニュー追加
 
@@ -109,7 +109,7 @@ h2 {
     <!-- メニュー編集 -->
 
     <div class="menu-btn"
-        onclick="location.href='./menu-edit-list'">
+        onclick="location.href='{{ route('prototypemenu-edit-list') }}'">
 
         メニュー編集
 
@@ -118,7 +118,7 @@ h2 {
     <!-- 戻る -->
 
     <button class="back-btn"
-        onclick="location.href='./home'">
+        onclick="location.href='{{ route('prototypehome') }}'">
 
         戻る
 

@@ -235,7 +235,7 @@ tbody tr {
     </table>
 
     <button class="back-btn"
-        onclick="location.href='./home'">
+        onclick="location.href='{{ route('prototypeorder-menu') }}'">
 
         戻る
 

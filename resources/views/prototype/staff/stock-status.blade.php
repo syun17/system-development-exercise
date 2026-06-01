@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>空席管理</title>
+<title>在庫状況</title>
 
 <style>
 body {
@@ -59,7 +59,7 @@ tbody tr {
 
 /* ===== プルダウン ===== */
 
-.seat-select {
+.stock-select {
 
     width: 100%;
 
@@ -89,6 +89,8 @@ tbody tr {
     border: 1px solid #666;
 
     font-size: 20px;
+
+    cursor: pointer;
 }
 </style>
 </head>
@@ -99,15 +101,14 @@ tbody tr {
 
 <div class="container">
 
-    <h2>空席管理</h2>
+    <h2>在庫状況</h2>
 
     <table>
 
         <thead>
             <tr>
-                <th>席番号</th>
-                <th>定員</th>
-                <th>空席</th>
+                <th>商品名</th>
+                <th>在庫</th>
             </tr>
         </thead>
 
@@ -115,19 +116,15 @@ tbody tr {
 
             <tr>
 
-                <td>1</td>
-
-                <td>6</td>
+                <td>ねぎま(塩)</td>
 
                 <td>
 
-                    <select class="seat-select">
+                    <select class="stock-select">
 
-                        <option>空</option>
+                        <option>有</option>
 
-                        <option>使</option>
-
-                        <option>掃</option>
+                        <option>無</option>
 
                     </select>
 
@@ -137,19 +134,15 @@ tbody tr {
 
             <tr>
 
-                <td>2</td>
-
-                <td>6</td>
+                <td>生ビール</td>
 
                 <td>
 
-                    <select class="seat-select">
+                    <select class="stock-select">
 
-                        <option>空</option>
+                        <option>有</option>
 
-                        <option>使</option>
-
-                        <option>掃</option>
+                        <option>無</option>
 
                     </select>
 
@@ -159,41 +152,15 @@ tbody tr {
 
             <tr>
 
-                <td>3</td>
-
-                <td>6</td>
+                <td>コークハイ</td>
 
                 <td>
 
-                    <select class="seat-select">
+                    <select class="stock-select">
 
-                        <option>空</option>
+                        <option>有</option>
 
-                        <option>使</option>
-
-                        <option>掃</option>
-
-                    </select>
-
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <td>4</td>
-
-                <td>6</td>
-
-                <td>
-
-                    <select class="seat-select">
-
-                        <option>空</option>
-
-                        <option>使</option>
-
-                        <option>掃</option>
+                        <option>無</option>
 
                     </select>
 
@@ -206,18 +173,15 @@ tbody tr {
             <tr>
                 <td>&nbsp;</td>
                 <td></td>
-                <td></td>
             </tr>
 
             <tr>
                 <td>&nbsp;</td>
                 <td></td>
-                <td></td>
             </tr>
 
             <tr>
                 <td>&nbsp;</td>
-                <td></td>
                 <td></td>
             </tr>
 
@@ -226,7 +190,7 @@ tbody tr {
     </table>
 
     <button class="back-btn"
-        onclick="location.href='./home'">
+        onclick="location.href='{{ route('prototypemenu-management') }}'">
 
         戻る
 
