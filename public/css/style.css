@@ -85,6 +85,7 @@ footer{
   max-width:430px;
   display:flex;
   background:#e76f51;
+  min-height:80px;
 }
 
 footer a{

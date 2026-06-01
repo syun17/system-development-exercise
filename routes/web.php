@@ -56,8 +56,29 @@ Route::view('/prototype/menu-edit-list', 'prototype.staff.menu-edit-list')->name
 
 Route::view('/prototype/menu-edit', 'prototype.staff.menu-edit')->name('prototypemenu-edit');
 
+Route::redirect('/prototype/staff/order', '/prototype/staff/order/home');
+
+Route::view('/prototype/staff/order/home', 'prototype.staff.order.orderHome')->name('prototype.staff.order.home');
+
+Route::view('/prototype/staff/order/add', 'prototype.staff.order.add')->name('prototype.staff.order.add');
+
+Route::view('/prototype/staff/order/cart', 'prototype.staff.order.cart')->name('prototype.staff.order.cart');
+
+Route::view('/prototype/staff/order/delete', 'prototype.staff.order.delete')->name('prototype.staff.order.delete');
+
+Route::view('/prototype/staff/order/confirm', 'prototype.staff.order.confirm')->name('prototype.staff.order.confirm');
+
+Route::view('/prototype/staff/order/complete', 'prototype.staff.order.complete')->name('prototype.staff.order.complete');
+
+Route::view('/prototype/staff/order/history', 'prototype.staff.order.history')->name('prototype.staff.order.history');
+
 Route::post('/prototype/cart/clear', function (Request $request) {
     $request->session()->forget('cart');
     return redirect('/prototype/cart?cleared=1');
 })->name('prototype.cart.clear');
+
+Route::post('/prototype/staff/order/cart/clear', function (Request $request) {
+    $request->session()->forget('cart');
+    return redirect()->route('prototype.staff.order.cart', ['cleared' => 1]);
+})->name('prototype.staff.order.cart.clear');
 
