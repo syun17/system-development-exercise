@@ -225,7 +225,12 @@ tbody tr {
 
     </table>
 
-    <button class="back-btn" onclick="location.href='{{ url('/prototype/home') }}'">戻る</button>
+    <button class="back-btn"
+        onclick="location.href='{{ route('prototypehome') }}'">
+
+        戻る
+
+    </button>
 
 </div>
 

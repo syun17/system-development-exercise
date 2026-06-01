@@ -5,12 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ログイン</title>
 <style>
-body { margin:0; font-family:sans-serif; background-color:#e6b98a; display:flex; flex-direction:column; min-height:100vh; }
-.header, .footer { height:60px; background-color:#e0663f; flex-shrink:0; }
-.container { text-align:center; padding:40px 20px; flex:1; }
-h2 { margin-bottom:30px; }
-input { width:80%; padding:10px; margin:10px 0; border:1px solid #888; }
-button { width:80%; padding:15px; margin-top:30px; background-color:#d8cc8c; border:1px solid #888; font-size:16px; }
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #e6b98a;
+    /* --- フッターを下に押し出すための追加 --- */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    height: 60px;
+    background-color: #e0663f;
+    /* 縮まないように固定 */
+    flex-shrink: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 40px 20px;
+    /* 余ったスペースをすべて埋めて、フッターを下に押し出す */
+    flex: 1;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #888;
+}
+button {
+    width: 80%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #d8cc8c;
+    border: 1px solid #888;
+    font-size: 16px;
+}
 </style>
 </head>
 <body>
@@ -23,7 +58,7 @@ button { width:80%; padding:15px; margin-top:30px; background-color:#d8cc8c; bor
     <input type="text" placeholder="従業員ID"><br>
     <input type="password" placeholder="パスワード"><br>
 
-    <button onclick="location.href='{{ url('/prototype/home') }}'">ログイン</button>
+    <button onclick="location.href='{{ route('prototypehome') }}'">ログイン</button>
 </div>
 
 <div class="footer"></div>

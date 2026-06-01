@@ -4,39 +4,49 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ホーム</title>
+
 <style>
 body {
     margin: 0;
     font-family: sans-serif;
     background-color: #e6b98a;
+
     /* --- フッターを下に押し出すための追加 --- */
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
+/* ヘッダーとフッター */
 .header, .footer {
     height: 60px;
     background-color: #e0663f;
+
     /* 縮まないように固定 */
     flex-shrink: 0;
 }
 
+/* メインコンテンツ */
 .container {
     padding: 20px;
+
     /* 余ったスペースをすべて埋めて、フッターを下に押し出す */
     flex: 1;
 }
 
+/* タイトル */
 h2 {
     margin-bottom: 20px;
 }
 
+/* メニューボタン */
 .menu-btn {
     display: block;
     width: 100%;
+
     /* paddingとborderを横幅(width:100%)に含める設定 */
-    box-sizing: border-box; 
+    box-sizing: border-box;
+
     padding: 20px;
     margin-bottom: 20px;
     background-color: #d8cc8c;
@@ -45,12 +55,14 @@ h2 {
     font-size: 18px;
 }
 
+/* ログアウトボタン */
 .logout {
     background-color: red;
     color: white;
 }
 </style>
 </head>
+
 <body>
 
 <div class="header"></div>
@@ -58,17 +70,27 @@ h2 {
 <div class="container">
     <h2>ホーム</h2>
 
-    <div class="menu-btn" onclick="location.href='{{ url('/prototype/order-menu') }}'">
+    <div class="menu-btn" onclick="location.href='{{ route('prototypeorder-menu') }}'">
         注文状況
     </div>
-    <div class="menu-btn" onclick="location.href='{{ url('/prototype/seat-management') }}'">
+
+    <div class="menu-btn" onclick="location.href='{{ route('prototypeseat-management') }}'">
+        座席管理
+    </div>
+
+    <div class="menu-btn" onclick="location.href='{{ route('prototypeseat-management') }}'">
         空席管理
     </div>
-    <div class="menu-btn" onclick="location.href='{{ url('/prototype/menu-management') }}'">
+
+    <div class="menu-btn" onclick="location.href='{{ route('prototypeorder-menu') }}'">
+        注文
+    </div>
+
+    <div class="menu-btn" onclick="location.href='{{ route('prototypemenu-management') }}'">
         メニュー管理
     </div>
 
-    <div class="menu-btn logout" onclick="location.href='{{ url('/prototype/login') }}'">
+    <div class="menu-btn logout" onclick="location.href='{{ route('prototypelogin') }}'">
         ログアウト
     </div>
 </div>
