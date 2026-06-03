@@ -5,7 +5,7 @@
 <meta name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-<title>メニュー追加</title>
+<title>メニュー編集</title>
 
 <style>
 
@@ -159,6 +159,8 @@ h2 {
     margin-top: 20px;
 }
 
+/* ===== 戻るボタン ===== */
+
 .back-btn {
 
     width: 90px;
@@ -176,7 +178,9 @@ h2 {
     cursor: pointer;
 }
 
-.add-btn {
+/* ===== 編集ボタン ===== */
+
+.edit-btn {
 
     width: 90px;
 
@@ -191,15 +195,6 @@ h2 {
     font-size: 20px;
 
     cursor: pointer;
-}
-
-.add-btn:disabled {
-
-    background-color: #aaa;
-
-    cursor: not-allowed;
-
-    opacity: 0.6;
 }
 
 /* ===== モーダル ===== */
@@ -260,6 +255,8 @@ h2 {
     margin-bottom: 15px;
 }
 
+/* ===== モーダルボタン ===== */
+
 .modal-buttons {
 
     display: flex;
@@ -268,6 +265,8 @@ h2 {
 
     gap: 10px;
 }
+
+/* ===== キャンセル ===== */
 
 .cancel-btn {
 
@@ -284,6 +283,8 @@ h2 {
     cursor: pointer;
 }
 
+/* ===== 編集 ===== */
+
 .ok-btn {
 
     width: 80px;
@@ -299,7 +300,7 @@ h2 {
     cursor: pointer;
 }
 
-/* ===== numberの↑↓削除 ===== */
+/* ===== numberの↑↓を消す ===== */
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -314,64 +315,90 @@ input[type="number"]::-webkit-inner-spin-button {
 
 <body>
 
+<!-- ===== ヘッダー ===== -->
+
 <div class="header"></div>
+
+<!-- ===== コンテンツ ===== -->
 
 <div class="container">
 
-    <h2>メニュー追加</h2>
+    <h2>メニュー編集</h2>
+
+    <!-- ===== 画像 ===== -->
 
     <div class="image-box"
         onclick="document.getElementById('imageInput').click()">
 
-        <img id="preview" style="display:none;">
+        <img id="preview"
+            style="display:none;">
 
-        <span id="imageText">写真の追加</span>
+        <span id="imageText">
+
+            写真
+
+        </span>
 
     </div>
+
+    <!-- ===== ファイル選択 ===== -->
 
     <input type="file"
         id="imageInput"
         accept="image/*"
+        capture="environment"
         style="display:none"
         onchange="previewImage(event)">
+
+    <!-- ===== 商品名 ===== -->
 
     <div class="input-box">
 
         <span>商品名：</span>
 
-        <input type="text" id="menuName">
+        <input type="text"
+            id="menuName">
 
     </div>
+
+    <!-- ===== 値段 ===== -->
 
     <div class="input-box">
 
         <span>値段：</span>
 
-        <input type="number" id="menuPrice">
+        <input type="number"
+            id="menuPrice">
 
     </div>
 
+    <!-- ===== ボタン ===== -->
+
     <div class="button-area">
 
+        <!-- ===== 戻る ===== -->
+
         <button class="back-btn"
-            onclick="location.href='./menu-management'">
+            onclick="location.href='{{ route('prototypemenu-edit-list') }}'">
 
             戻る
 
         </button>
 
-        <button class="add-btn"
-            id="addBtn"
-            onclick="openModal()"
-            disabled>
+        <!-- ===== 編集 ===== -->
 
-            追加
+        <button class="edit-btn"
+            onclick="openModal()">
+
+            編集
 
         </button>
 
     </div>
 
 </div>
+
+<!-- ===== フッター ===== -->
 
 <div class="footer"></div>
 
@@ -382,19 +409,27 @@ input[type="number"]::-webkit-inner-spin-button {
 
     <div class="modal-content">
 
+        <!-- ===== タイトル ===== -->
+
         <div class="modal-title">
 
             確認
 
         </div>
 
+        <!-- ===== メッセージ ===== -->
+
         <div class="modal-message">
 
-            本当に追加しますか？
+            本当に編集しますか？
 
         </div>
 
+        <!-- ===== ボタン ===== -->
+
         <div class="modal-buttons">
+
+            <!-- ===== キャンセル ===== -->
 
             <button class="cancel-btn"
                 onclick="closeModal()">
@@ -403,10 +438,12 @@ input[type="number"]::-webkit-inner-spin-button {
 
             </button>
 
-            <button class="ok-btn"
-                onclick="addMenu()">
+            <!-- ===== 編集 ===== -->
 
-                追加
+            <button class="ok-btn"
+                onclick="completeEdit()">
+
+                編集
 
             </button>
 
@@ -422,11 +459,13 @@ input[type="number"]::-webkit-inner-spin-button {
 
 function previewImage(event) {
 
-    const file = event.target.files[0];
+    const file =
+        event.target.files[0];
 
     if(!file) return;
 
-    const reader = new FileReader();
+    const reader =
+        new FileReader();
 
     reader.onload = function(e) {
 
@@ -442,40 +481,6 @@ function previewImage(event) {
 
     reader.readAsDataURL(file);
 }
-
-/* ===== 入力チェック ===== */
-
-const nameInput =
-    document.getElementById("menuName");
-
-const priceInput =
-    document.getElementById("menuPrice");
-
-const addBtn =
-    document.getElementById("addBtn");
-
-function checkInput() {
-
-    addBtn.disabled = !(
-        nameInput.value.trim() !== "" &&
-        priceInput.value.trim() !== ""
-    );
-}
-
-nameInput.addEventListener(
-    "input",
-    checkInput
-);
-
-priceInput.addEventListener(
-    "input",
-    checkInput
-);
-
-window.onload = function() {
-
-    addBtn.disabled = true;
-};
 
 /* ===== モーダル表示 ===== */
 
@@ -501,11 +506,11 @@ function closeModal() {
     );
 }
 
-/* ===== 追加処理 ===== */
+/* ===== 編集 ===== */
 
-function addMenu() {
+function completeEdit() {
 
-    alert("追加しました");
+    alert("編集しました");
 
     closeModal();
 }
