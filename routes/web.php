@@ -72,6 +72,10 @@ Route::view('/prototype/staff/order/complete', 'prototype.staff.order.complete')
 
 Route::view('/prototype/staff/order/history', 'prototype.staff.order.history')->name('prototype.staff.order.history');
 
+Route::view('/prototype/staff/order/detail', 'prototype.staff.order.detail')->name('prototype.staff.order.detail');
+
+Route::view('/prototype/staff/order', 'prototype.staff.order')->name('prototype.staff.order');
+
 Route::post('/prototype/cart/clear', function (Request $request) {
     $request->session()->forget('cart');
     return redirect('/prototype/cart?cleared=1');

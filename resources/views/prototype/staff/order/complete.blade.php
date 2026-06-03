@@ -43,11 +43,10 @@
 
 setTimeout(() => {
 
-  window.location.href = "{{ url('/prototype/orderHome') }}";
+  window.location.href = "{{ route('prototype.staff.order.home') }}";
 
 }, 1000);
 
 </script>
-
-    window.location.href = '{{ route('prototype.staff.order.home') }}';
+</html>
 </html>

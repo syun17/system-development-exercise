@@ -36,6 +36,14 @@
   <main id="menu-list"></main>
 
   <footer>
+    <a href="{{ url('/prototype/staff/order/cart') }}">
+      <button>注文カゴ</button>
+    </a>
+    <a href="{{ url('prototype/home') }}">
+      <button>
+        ホーム
+      </button>
+    </a>
   </footer>
 
 </div>
@@ -71,7 +79,7 @@
 
     menus[category].forEach((item) => {
       menuList.innerHTML += `
-        <a href="{{ url('/prototype/detail') }}" class="item">
+        <a href="{{ url('/prototype/staff/order/detail') }}" class="item">
           <div class="item-text">
             <h2>${item.name}</h2>
             <p>${item.price}</p>

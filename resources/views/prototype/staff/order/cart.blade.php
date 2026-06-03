@@ -116,7 +116,16 @@
 
   <!-- フッター -->
   <footer>
-
+    <a href="{{ url('/prototype/staff/order/home') }}">
+      <button>
+        注文
+      </button>
+    </a>
+    <a href="{{ url('prototype/home') }}">
+      <button>
+        ホーム
+      </button>
+    </a>
   </footer>
 
 </div>
