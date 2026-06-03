@@ -34,7 +34,7 @@
 
   </nav>
 
-  <img class="detail-image" src="/images/negima.jpg" alt="ねぎま">
+  <img class="detail-image" src="{{ asset('images/negima.jpg') }}" alt="ねぎま">
 
   <div class="detail-info">
 

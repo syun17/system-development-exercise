@@ -63,7 +63,7 @@
     food: [
       { name: 'ねぎま', price: '150円', image: '/images/negima.jpg' },
       { name: 'もも', price: '150円', image: '/images/momo.jpg' },
-      { name: 'せせり', price: '150円', image: '/images/seseri.jpg' },
+      { name: 'せせり', price: '150円', image: '/images/seseri.jpg', soldOut: true },
     ],
     drink: [
       { name: '生ビール', price: '500円', image: '/images/beer.jpg' },
@@ -80,6 +80,7 @@
 
   function showMenu(category, event) {
     const menuList = document.getElementById('menu-list');
+    const detailUrl = "{{ url('/prototype/detail') }}";
 
     if (!menuList || !menus[category]) {
       return;
@@ -88,14 +89,23 @@
     menuList.innerHTML = '';
 
     menus[category].forEach((item) => {
+      const wrapperTag = item.soldOut ? 'div' : 'a';
+      const wrapperAttrs = item.soldOut
+        ? 'class="item sold-out"'
+        : `href="${detailUrl}" class="item"`;
+      const soldOutLabel = item.soldOut
+        ? '<span class="sold-out-label">品切れ</span>'
+        : '';
+
       menuList.innerHTML += `
-        <a href="{{ url('/prototype/detail') }}" class="item">
+        <${wrapperTag} ${wrapperAttrs}>
           <div class="item-text">
             <h2>${item.name}</h2>
             <p>${item.price}</p>
+            ${soldOutLabel}
           </div>
           <img src="${item.image}" alt="">
-        </a>
+        </${wrapperTag}>
       `;
     });
 
