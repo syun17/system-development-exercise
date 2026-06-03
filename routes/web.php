@@ -78,6 +78,10 @@ Route::view('/prototype/staff/order', 'prototype.staff.order')->name('prototype.
 
 Route::view('/prototype/staff/staff-history', 'prototype.staff.staff_history')->name('prototype.staff.staff.history');
 
+Route::view('/prototype/staff/vacancy', 'prototype.staff.vacancy-management')->name('prototype.staff.vacancy');
+
+Route::view('/prototype/staff/qr', 'prototype.staff.qr-management')->name('prototype.staff.qr');
+
 Route::post('/prototype/cart/clear', function (Request $request) {
     $request->session()->forget('cart');
     return redirect('/prototype/cart?cleared=1');
