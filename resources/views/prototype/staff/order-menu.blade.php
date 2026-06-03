@@ -104,23 +104,27 @@ h2 {
     cursor: pointer;
 }
 
-/* フッターのホームボタン */
-.footer-home-btn {
+/* 家アイコンボタン */
+.home-icon-btn {
 
-    width: 45px;
-    height: 45px;
+    width: 70px;
+    height: 70px;
 
     border: none;
 
-    border-radius: 50%;
+    border-radius: 20px;
 
-    background-color: white;
+    background-color: #d9d9d9;
 
-    color: #e0663f;
+    font-size: 42px;
 
-    font-size: 26px;
+    color: #444;
 
     cursor: pointer;
+
+    box-shadow:
+        inset 0 2px 4px rgba(255,255,255,0.7),
+        0 2px 5px rgba(0,0,0,0.2);
 
     display: flex;
     justify-content: center;
@@ -175,10 +179,10 @@ h2 {
 
 <div class="footer">
 
-    <button class="footer-home-btn"
+    <button class="home-icon-btn"
         onclick="location.href='{{ route('prototypehome') }}'">
 
-        🏠
+        ⌂
 
     </button>
 

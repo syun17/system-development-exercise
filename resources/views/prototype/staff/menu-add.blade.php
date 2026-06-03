@@ -35,12 +35,33 @@ body.modal-open {
 
 .header,
 .footer {
-
-    height: 60px;
-
+    height: 80px;
     background-color: #e0663f;
 
-    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-icon-btn {
+    width: 70px;
+    height: 70px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-color: #d9d9d9;
+
+    font-size: 42px;
+    color: #444;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        inset 0 2px 4px rgba(255,255,255,0.7),
+        0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* ===== コンテンツ ===== */
@@ -373,7 +394,16 @@ input[type="number"]::-webkit-inner-spin-button {
 
 </div>
 
-<div class="footer"></div>
+<div class="footer">
+
+    <button class="home-icon-btn"
+        onclick="location.href='{{ route('prototypehome') }}'">
+
+        ⌂
+
+    </button>
+
+</div>
 
 <!-- ===== モーダル ===== -->
 
