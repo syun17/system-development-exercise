@@ -80,7 +80,12 @@ Route::view('/prototype/staff/staff-history', 'prototype.staff.staff_history')->
 
 Route::view('/prototype/staff/vacancy', 'prototype.staff.vacancy-management')->name('prototype.staff.vacancy');
 
-Route::view('/prototype/staff/qr', 'prototype.staff.qr-management')->name('prototype.staff.qr');
+Route::get('/prototype/staff/qr', function (Request $request) {
+    return view('prototype.staff.qr', [
+        'seat' => $request->query('seat'),
+        'course' => $request->query('course'),
+    ]);
+})->name('prototype.staff.qr');
 
 Route::post('/prototype/cart/clear', function (Request $request) {
     $request->session()->forget('cart');

@@ -19,13 +19,6 @@
 
   </header>
 
-  <nav class="tabs">
-    <button>料理</button>
-    <button>ドリンク</button>
-    <button>サービス</button>
-    <button>店舗限定</button>
-  </nav>
-
   <div class="confirm-area">
 
     <h1>注文を確定しますか？</h1>

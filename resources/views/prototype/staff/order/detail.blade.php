@@ -11,7 +11,6 @@
 <div class="container">
 
   <header>
-    <div class="time">残り時間 60分</div>
   </header>
 
   <nav class="tabs">
