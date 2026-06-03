@@ -204,7 +204,7 @@ tbody tr {
                 <td class="count clickable"
                     onclick="openModal(this, 'order')">
 
-                    1
+                    5
 
                 </td>
 
@@ -212,7 +212,7 @@ tbody tr {
                 <td class="served clickable"
                     onclick="openModal(this, 'served')">
 
-                    1
+                    0
 
                 </td>
 
@@ -227,14 +227,14 @@ tbody tr {
                 <td class="count clickable"
                     onclick="openModal(this, 'order')">
 
-                    1
+                    3
 
                 </td>
 
                 <td class="served clickable"
                     onclick="openModal(this, 'served')">
 
-                    1
+                    0
 
                 </td>
 
