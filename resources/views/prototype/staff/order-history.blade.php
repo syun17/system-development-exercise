@@ -168,7 +168,9 @@ h2{
 
             <button class="history-btn"
                     id="historyBtn"
-                    disabled>
+                    disabled
+                    onclick="location.href='{{ route('prototype.staff.staff.history') }}'"
+                    >
 
                 履歴
 
