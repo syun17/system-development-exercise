@@ -78,7 +78,7 @@ h2 {
         座席管理
     </div>
 
-    <div class="menu-btn" onclick="location.href='{{ route('prototypeseat-management') }}'">
+    <div class="menu-btn" onclick="location.href='{{ route('prototype.staff.vacancy') }}'">
         空席管理
     </div>
 

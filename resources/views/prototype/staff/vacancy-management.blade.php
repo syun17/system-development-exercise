@@ -330,7 +330,7 @@ function selectCourse(course) {
     localStorage.setItem("seat" + selectedSeat, "使");
 
     location.href =
-        "qr.html?seat=" +
+        "/prototype/staff/qr?seat=" +
         selectedSeat +
         "&course=" +
         encodeURIComponent(course);
