@@ -82,7 +82,7 @@ h2 {
         空席管理
     </div>
 
-    <div class="menu-btn" onclick="location.href='{{ route('prototypeorder-menu') }}'">
+    <div class="menu-btn" onclick="location.href='{{ route('prototype.staff.order') }}'">
         注文
     </div>
 
