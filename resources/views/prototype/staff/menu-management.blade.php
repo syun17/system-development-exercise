@@ -135,7 +135,7 @@ h2 {
     <div class="menu-btn"
         onclick="location.href='{{ route('prototypemenu-edit-list') }}'">
 
-        メニュー編集
+        メニュー編集一覧
 
     </div>
 
