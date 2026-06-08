@@ -530,7 +530,7 @@ let deleteTarget = null;
 function editMenu() {
 
     location.href =
-        '{{ route('prototypemenu-menu-edit') }}';
+        "{{ route('prototypemenu-edit') }}";
 }
 
 /* ===== モーダル表示 ===== */
