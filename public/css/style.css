@@ -491,3 +491,23 @@ footer button{
   text-align:center;
   font-size:35px;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.container {
+  padding-bottom: 300px;
+}
+
+
+.total-area {
+  z-index: 8;
+}
+
+.cart-buttons {
+  z-index: 9;
+}
